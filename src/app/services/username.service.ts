@@ -10,7 +10,7 @@ export class UsernameService {
 
   constructor(private http:Http) {
   console.log("service is now ready!");
-  this.username="ephantus";
+  this.username="ephantuskaranja";
 }
 getUsername(){
   return this.http.get("https://api.github.com/users/" + this.username).pipe(map(res => res.json()))
