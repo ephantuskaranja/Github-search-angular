@@ -1,10 +1,18 @@
 import { Injectable } from '@angular/core';
-import { http, Headers } from '@angular/http'
+import { Http, Headers } from '@angular/http';
+import { map } from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsernameService {
+  private username:string;
 
-  constructor() { }
+  constructor(private http:Http) {
+  console.log("service is now ready!");
+  this.username="ephantus";
+}
+getUsername(){
+  return this.http.get("https://api.github.com/users/" + this.username).pipe(map(res => res.json()))
+}
 }

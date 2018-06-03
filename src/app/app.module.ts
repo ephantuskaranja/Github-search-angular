@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { UsernameService } from './services/username.service';
 
 import { AppComponent } from './app.component';
 import { UsernameComponent } from './components/username/username.component';
@@ -10,9 +12,10 @@ import { UsernameComponent } from './components/username/username.component';
     UsernameComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [UsernameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
