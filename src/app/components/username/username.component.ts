@@ -8,13 +8,18 @@ import { UsernameService } from '../../services/username.service';
 })
 export class UsernameComponent implements OnInit {
   username:any[];
+  uname: string;
 
-  constructor(private usernameService:UsernameService) {
-  this.usernameService.getUsername().subscribe(username =>{
-    console.log(username);
-    this.username=username;
-  })
- }
+  constructor(private usernameService: UsernameService) {
+
+  }
+  findUser() {
+    this.usernameService.updateUsername(this.uname);
+    this.usernameService.getUsername().subscribe(username => {
+      console.log(username);
+      this.username = username;
+    });
+  }
 
   ngOnInit() {
   }

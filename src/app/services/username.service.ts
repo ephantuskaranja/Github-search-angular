@@ -6,13 +6,19 @@ import { map } from "rxjs/operators";
   providedIn: 'root'
 })
 export class UsernameService {
-  private username:string;
+  private uname:string;
+  private clientid = "4ad0e08a38d5d34b4f67";
+  private clientsecret = "958e871ebc4485ad8584697ce34b9dfdacf6b817";
 
   constructor(private http:Http) {
   console.log("service is now ready!");
-  this.username="ephantuskaranja";
+  this.uname="ephantuskaranja";
 }
 getUsername(){
-  return this.http.get("https://api.github.com/users/" + this.username).pipe(map(res => res.json()))
+  return this.http.get("https://api.github.com/users/" + this.uname + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret).pipe(map(res => res.json()))
+}
+updateUsername(uname:string){
+  this.uname=uname;
+
 }
 }
