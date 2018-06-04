@@ -1,3 +1,33 @@
 <div *ngIf="username">
-  <span>{{username.name}}</span>
+  <h2>User-Details:</h2>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      {{username.name}}
+      <small>({{username.login}})</small>
+      <span *ngIf="username.company">, Company:{{username.company}}</span> {{username.location}}
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="{{username.avatar_url}}" alt="profileImage">
+        </div>
+        <div class="col-sm-5">
+          <ul class="list-group">
+            <li class="list-group-item" *ngIf="username.bio">{{username.bio}}</li>
+          </ul>
+        </div>
+        <div class="col-sm-3">
+          <div>
+            <p>
+              <span class="label-label-default">{{username.followers}} followers </span>
+              <span class="label-label-primary">following {{username.following}} </span>
+              <span class="label-label-success">{{username.public_gists}} public gists </span>
+              <span class="label-label-info">{{username.public_repos}} Repositories</span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
