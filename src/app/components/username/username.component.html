@@ -1,5 +1,10 @@
+<form action="">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Enter Github username to search">
+  </div>
+</form>
 <div *ngIf="username">
-  <h2>User-Details:</h2>
+  <h2>Profile-Details:</h2>
   <div class="panel panel-default">
     <div class="panel-heading">
       {{username.name}}
@@ -19,13 +24,13 @@
         <div class="col-sm-3">
           <div>
             <p>
-              <span class="label-label-default">{{username.followers}} followers </span>
-              <span class="label-label-primary">following {{username.following}} </span>
-              <span class="label-label-success">{{username.public_gists}} public gists </span>
-              <span class="label-label-info">{{username.public_repos}} Repositories</span>
+              <span class="label label-default">{{username.followers}} followers </span>
+              <span class="label label-primary">following {{username.following}} </span>
+              <span class="label label-success">{{username.public_gists}} public gists </span>
+              <span class="label label-info">{{username.public_repos}} Repositories</span>
             </p>
           </div>
-
+          <p><a href="{{username.html_url}}" class="btn btn-success btn">View profile On Github</a></p>
         </div>
       </div>
     </div>
