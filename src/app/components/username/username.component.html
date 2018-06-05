@@ -19,6 +19,8 @@
         <div class="col-sm-5">
           <ul class="list-group">
             <li class="list-group-item" *ngIf="username.bio">{{username.bio}}</li>
+            <li class="list-group-item" *ngIf="username.hireable">{{username.bio}} Available for Hire</li>
+            <li class="list-group-item" *ngIf="username.email">Email address: {{username.email}}</li>
           </ul>
         </div>
         <div class="col-sm-3">
