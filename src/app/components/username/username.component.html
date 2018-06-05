@@ -1,47 +1,58 @@
-<form action="" class="search">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Enter Github username to search" [(ngModel)]="uname" name="username" (keyup)="findUser()">
+<div class="fill">
+  <div class="jumbotron">
+    <h1>Git Search:By Ephantus!</h1>
   </div>
-</form>
-<div *ngIf="username">
-  <h2>Profile-Details:</h2>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      {{username.name}}
-      <small>({{username.login}})</small>n
-      <span *ngIf="username.company">, Company:{{username.company}}</span> {{username.location}}
+  <form action="" class="search">
+    <div class="form-group">
+      <input type="text" id="search" class="form-control" placeholder="Enter Github username to search" [(ngModel)]="uname" name="username"
+        (keyup)="findUser()">
     </div>
-    <div class="panel-body">
-      <div class="row">
-        <div class="col-sm-4">
-          <img src="{{username.avatar_url}}" alt="profileImage">
-        </div>
-        <div class="col-sm-5">
-          <ul class="list-group">
-            <li class="list-group-item" *ngIf="username.bio">{{username.bio}}</li>
-            <li class="list-group-item" *ngIf="username.hireable">{{username.bio}} Available for Hire</li>
-            <li class="list-group-item" *ngIf="username.email">Email address: {{username.email}}</li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <div>
-            <p>
-              <span class="label label-default">{{username.followers}} followers </span>
-              <span class="label label-primary">following {{username.following}} </span>
-              <span class="label label-success">{{username.public_gists}} public gists </span>
-              <span class="label label-info">{{username.public_repos}} Repositories</span>
-            </p>
+  </form>
+  <div *ngIf="username">
+    <h2>Profile-Details:</h2>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        {{username.name}}
+        <small>({{username.login}})</small>n
+        <span *ngIf="username.company">, Company:{{username.company}}</span> {{username.location}}
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="{{username.avatar_url}}" alt="profileImage">
           </div>
-          <p><a href="{{username.html_url}}" class="btn btn-success btn">View profile On Github</a></p>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3>Repos</h3>
-            </div>
-            <div class="panel-body" *ngFor="let repo of repos">
+          <div class="col-sm-5">
+            <ul class="list-group">
+              <li class="list-group-item" *ngIf="username.bio">{{username.bio}}</li>
+              <li class="list-group-item" *ngIf="username.hireable">{{username.bio}} Available for Hire</li>
+              <li class="list-group-item" *ngIf="username.email">Email address: {{username.email}}</li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <div>
               <p>
-                {{repo.name}} <a href="{{repo.html_url}}" class="btn btn-sm btn-info">View Repo on Github</a>
+                <span class="label label-default">{{username.followers}} followers </span>
+                <span class="label label-primary">following {{username.following}} </span>
+                <span class="label label-success">{{username.public_gists}} public gists </span>
+                <span class="label label-info">{{username.public_repos}} Repositories</span>
               </p>
+            </div>
+            <div>
+              <p>
+                <a href="{{username.html_url}}" class="btn btn-success btn">View profile On Github</a>
+              </p>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3>Repos</h3>
+              </div>
+              <div class="panel-body" *ngFor="let repo of repos">
+                <p>
+                  {{repo.name}}
+                  <a href="{{repo.html_url}}" class="btn btn-sm btn-info">View Repo on Github</a>
+                </p>
 
+              </div>
             </div>
           </div>
         </div>

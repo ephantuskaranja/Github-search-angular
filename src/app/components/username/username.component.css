@@ -1,3 +1,16 @@
 .search{
     padding-top: 40px;
 }
+.jumbotron {
+    /* border: solid black 5px; */
+    padding: 0.5em 0.6em;
+    padding-top: 20px;
+    color: coral;
+    
+}
+.fill{
+    height: 100%;
+    width: 100%;
+    background-color: teal;
+    color: white;
+}
