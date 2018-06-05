@@ -9,7 +9,7 @@ import { UsernameService } from '../../services/username.service';
 export class UsernameComponent implements OnInit {
   username:any[];
   uname: string;
-
+  repos:any[];
   constructor(private usernameService: UsernameService) {
 
   }
@@ -19,6 +19,10 @@ export class UsernameComponent implements OnInit {
       console.log(username);
       this.username = username;
     });
+    this.usernameService.getRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos= repos;
+    })
   }
 
   ngOnInit() {

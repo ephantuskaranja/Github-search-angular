@@ -15,10 +15,14 @@ export class UsernameService {
   this.uname="ephantuskaranja";
 }
 getUsername(){
-  return this.http.get("https://api.github.com/users/" + this.uname + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret).pipe(map(res => res.json()))
+  return this.http.get("https://api.github.com/users/" + this.uname + "?client_id=" +
+   this.clientid + "&client_secret=" + this.clientsecret).pipe(map(res => res.json()))
+}
+getRepos(){
+  return this.http.get("https://api.github.com/users/" + this.uname + "/repos?client_id=" +
+   this.clientid + "&client_secret=" + this.clientsecret).pipe(map(res => res.json()))
 }
 updateUsername(uname:string){
   this.uname=uname;
-
 }
 }
