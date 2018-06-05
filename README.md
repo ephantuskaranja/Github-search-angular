@@ -1,27 +1,33 @@
-# MyGitSearcher
+# Github Replica
+#### A Website that uses the GitHub API to perform searches on GitHub and display the results to the user , June 1st, 2018.
+#### By **[Ephantus karanja](https://github.com/ephantuskaranja)**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
+## Description
+The Github Replica is a website that uses the Github API to perform searches on Github, and display the results to the users.
 
-## Development server
+The website is made using angular js framework, and uses components, custom directives, custom pipes, routing modules and classes to make the finished product.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Specifications
+| Behavior                  | Input                     | Output                    |
+| ------------------------- | ------------------------- | ------------------------- |
+| Show github profile | Enter the Username in the search box without spaces | Displays name, username, number of repositories, Hireable, date of creating the repo, followers, following and lists the repos  |
+| Redirect to a specific github profile on Github website | Click the username of a Github user to redirect | Opens the profile on the Github website |
+| Redirect to a specific Github Repository | Click the repository name to redirect | Opens the Repository on Github website |
 
-## Code scaffolding
+## Preview
+**[Click here]()** to see the live site.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Known Bugs
+No bugs so far. If found, email me at ephantusslogan@gmail.com
 
-## Build
+## Technologies Used
+    1. HTML
+    2. Bootstrap
+    3. Angular JS
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Support and contact details
+Contact me on ephantusslogan.com for any comments, reviews or advice.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### License
+MIT
+Copyright (c) **Ephantus Karanja**

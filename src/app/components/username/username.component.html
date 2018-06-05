@@ -1,7 +1,6 @@
 <form action="" class="search">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Enter Github username to search"
-    [(ngModel)]="uname" name="username" (keyup)="findUser()">
+    <input type="text" class="form-control" placeholder="Enter Github username to search" [(ngModel)]="uname" name="username" (keyup)="findUser()">
   </div>
 </form>
 <div *ngIf="username">
@@ -9,7 +8,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       {{username.name}}
-      <small>({{username.login}})</small>
+      <small>({{username.login}})</small>n
       <span *ngIf="username.company">, Company:{{username.company}}</span> {{username.location}}
     </div>
     <div class="panel-body">
