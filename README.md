@@ -15,7 +15,8 @@ The website is made using angular js framework, and uses components, custom dire
 | Redirect to a specific Github Repository | Click the repository name to redirect | Opens the Repository on Github website |
 
 ## Preview
-**[Click here]()** to see the live site.
+## Live Website
+**[Click here](https://ephantuskaranja.github.io/Github-search-angular/)** to see the live site.
 
 ## Known Bugs
 No bugs so far. If found, email me at ephantusslogan@gmail.com
